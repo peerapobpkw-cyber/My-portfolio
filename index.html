@@ -4,7 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flukexps</title>
-  <style>
+  .gallery {
+  max-width: 1000px;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #334155;
+}
+@media (max-width: 700px) {
+  .gallery { grid-template-columns: 1fr; }
+}  <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -87,8 +103,11 @@
     }
     .card h2 { margin-top: 0; color: #93c5fd; }
     .card p { font-size: 15px; margin: 0; }
-
-    footer {
+<section class="gallery">
+  <img src="Home1.jpg" alt="บ้านสไตล์คลาสสิก">
+  <img src="Home2.jpg" alt="บ้านสไตล์โมเดิร์น">
+  <img src="Image 11-9-2569 BE at 15.36.jpeg" alt="เว็บไซต์ Flukexps">
+</section>    footer {
       text-align: center;
       padding: 28px;
       color: #94a3b8;
