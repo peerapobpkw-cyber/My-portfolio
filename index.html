@@ -1,40 +1,40 @@
 <!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flukexps</title>
-    <style>
-.gallery {
-}
-@media (max-width: 700px) {
-  .gallery { grid-template-columns: 1fr; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flukexps | Portfolio</title>
 
-<style>
-  * { box-sizing: border-box; }    * { box-sizing: border-box; }
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #eef2ff;
       background: #0b1020;
     }
+
     .hero {
       min-height: 100vh;
-      padding: 28px 8%;
+      padding: 28px 8% 60px;
       background:
         radial-gradient(circle at top left, #3b82f6 0, transparent 34%),
         radial-gradient(circle at bottom right, #8b5cf6 0, transparent 32%),
         #0b1020;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .logo { font-size: 24px; font-weight: bold; }
     .logo span { color: #60a5fa; }
+
     .contact {
       padding: 10px 18px;
       border: 1px solid #93c5fd;
@@ -42,11 +42,13 @@
       color: white;
       text-decoration: none;
     }
+
     main {
       max-width: 850px;
       margin: 110px auto 50px;
       text-align: center;
     }
+
     .tag {
       display: inline-block;
       color: #bfdbfe;
@@ -54,20 +56,25 @@
       padding: 8px 14px;
       border-radius: 999px;
     }
+
     h1 {
       margin: 22px 0 16px;
       font-size: clamp(46px, 9vw, 88px);
       line-height: 1;
     }
+
     h1 span { color: #60a5fa; }
-    p {
+
+    .intro {
       max-width: 600px;
       margin: auto;
       color: #cbd5e1;
       font-size: 19px;
       line-height: 1.7;
     }
+
     .buttons { margin-top: 34px; }
+
     .button {
       display: inline-block;
       margin: 6px;
@@ -76,16 +83,23 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .primary { background: #3b82f6; color: white; }
     .secondary { border: 1px solid #64748b; color: white; }
 
-    .cards {
+    .cards, .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       max-width: 1000px;
-      margin: 70px auto 0;
+      margin-left: auto;
+      margin-right: auto;
     }
+
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 70px;
+    }
+
     .card {
       text-align: left;
       padding: 24px;
@@ -93,57 +107,104 @@
       border-radius: 16px;
       background: rgba(15, 23, 42, .75);
     }
+
     .card h2 { margin-top: 0; color: #93c5fd; }
-    .card p { font-size: 15px; margin: 0; }
-<section class="gallery">
-  <img src="Home1.jpg" alt="บ้านสไตล์คลาสสิก">
-  <img src="Home2.jpg" alt="บ้านสไตล์โมเดิร์น">
-  <img src="Image 11-9-2569 BE at 15.36.jpeg" alt="เว็บไซต์ Flukexps">
-</section>    footer {
+
+    .gallery-title {
+      max-width: 1000px;
+      margin: 75px auto 18px;
+      color: #93c5fd;
+      font-size: 30px;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      background: #0f172a;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding: 12px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    footer {
       text-align: center;
       padding: 28px;
       color: #94a3b8;
     }
+
     @media (max-width: 700px) {
-      .cards { grid-template-columns: 1fr; }
+      .cards, .gallery { grid-template-columns: 1fr; }
       main { margin-top: 75px; }
+      figure img { height: 260px; }
     }
   </style>
 </head>
+
 <body>
   <section class="hero">
     <nav>
       <div class="logo">Fluk<span>exps</span></div>
-      <a class="contact" href="mailto:your@email.com">ติดต่อฉัน</a>
+      <a class="contact" href="#portfolio">ผลงาน</a>
     </nav>
 
     <main>
       <div class="tag">ยินดีต้อนรับสู่เว็บไซต์ของฉัน</div>
       <h1>สวัสดีครับ ผมชื่อ <span>Fluke</span></h1>
-      <p>
-        นี่คือพื้นที่สำหรับแนะนำตัว แชร์ผลงาน
-        และบอกเล่าเรื่องที่ผมสนใจ
-      </p>
+      <p class="intro">นี่คือพื้นที่สำหรับแนะนำตัว แชร์ผลงาน และบอกเล่าเรื่องที่ผมสนใจ</p>
 
       <div class="buttons">
-        <a class="button primary" href="#about">รู้จักผมเพิ่มขึ้น</a>
+        <a class="button primary" href="#portfolio">ดูผลงาน</a>
         <a class="button secondary" href="https://github.com/peerapobpkw-cyber">GitHub</a>
       </div>
     </main>
 
-    <section class="cards" id="about">
+    <section class="cards">
       <div class="card">
         <h2>เกี่ยวกับฉัน</h2>
         <p>เขียนรายละเอียดสั้น ๆ เกี่ยวกับตัวเองไว้ตรงนี้</p>
       </div>
       <div class="card">
         <h2>ทักษะ</h2>
-        <p>เช่น HTML, CSS, JavaScript, การออกแบบ หรือสิ่งที่สนใจ</p>
+        <p>HTML, CSS, JavaScript, การออกแบบ และการสร้างผลงานดิจิทัล</p>
       </div>
       <div class="card">
         <h2>ผลงาน</h2>
-        <p>ใส่ลิงก์หรือรายละเอียดโปรเจกต์ที่อยากนำเสนอได้ที่นี่</p>
+        <p>รวมงานเว็บไซต์ แผนภาพ และสื่อการเรียนรู้</p>
       </div>
+    </section>
+
+    <h2 class="gallery-title" id="portfolio">ผลงานของฉัน</h2>
+
+    <section class="gallery">
+      <figure><img src="Home1.jpg" alt="Home 1"><figcaption>Home 1</figcaption></figure>
+      <figure><img src="Home2.jpg" alt="Home 2"><figcaption>Home 2</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2013.28.png" alt="Desmos"><figcaption>Desmos Graph</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2013.33.png" alt="Desmos"><figcaption>Desmos Design</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2013.58.png" alt="Tesla Diagram"><figcaption>Tesla Power Flow</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2014.00.png" alt="Mermaid"><figcaption>Mermaid Diagram</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2014.03.png" alt="System Diagram"><figcaption>System Overview</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2014.06.png" alt="Mermaid Code"><figcaption>Mermaid Code</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2014.35.png" alt="LaTeX"><figcaption>LaTeX Report</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2014.48.png" alt="LaTeX"><figcaption>Tesla Report</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2014.53.png" alt="Tesla Research"><figcaption>Tesla Research</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2015.03.png" alt="Tesla Slides"><figcaption>Tesla Slides</figcaption></figure>
+      <figure><img src="Image%2011-9-2569%20BE%20at%2015.36.jpeg" alt="Portfolio Website"><figcaption>Portfolio Website</figcaption></figure>
     </section>
   </section>
 
